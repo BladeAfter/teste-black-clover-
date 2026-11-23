@@ -1,0 +1,18 @@
+100 NOVOS HEROIS - CAVALEIROS DO GRIMORIO
+
+106 herois no total, preservando os seis de Black Clover existentes.
+Os 100 novos sao cavaleiros originais em Chibi 3D.
+Raridades: 20 Incomuns, 30 Raros, 30 Epicos e 20 Lendarios.
+Elementos: Fogo, Agua, Vento, Terra, Relampago, Gelo, Luz, Trevas,
+Natureza e Antimagia. Dez novos herois por elemento.
+
+Invocacao por raridade: Incomum 50%, Raro 30%, Epico 17%, Lendario 3%.
+Todos os herois da raridade sorteada possuem a mesma chance dentro do grupo.
+Novos personagens comecam bloqueados, obtidos por invocacao.
+Duplicatas concedem 500 ouro e um fragmento; tres fragmentos concedem tres niveis.
+Use os filtros e as paginas em Herois, Formacao, Bag e Fusao.
+O perfil permite escolher avatares dos herois obtidos, com paginas.
+
+Lista completa: assets/roster/heroes.csv.
+Dados e probabilidades: assets/roster/catalog.json.
+Artes e prompts: assets/roster/art-prompts.json.

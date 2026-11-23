@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="200" viewBox="0 0 180 200">
+<defs><radialGradient id="a"><stop stop-color="#ff9954" stop-opacity=".3"/><stop offset="1" stop-color="#ff9954" stop-opacity="0"/></radialGradient><linearGradient id="c" x2="1" y2="1"><stop stop-color="#302b3c"/><stop offset="1" stop-color="#242536"/></linearGradient></defs>
+<ellipse cx="90" cy="113" rx="84" ry="81" fill="url(#a)"/>
+<g stroke="#242333" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<path d="M66 128 L63 165 59 186 78 186 89 143 96 166 99 186 118 186 112 130Z" fill="#343440"/>
+<path d="M60 176 L78 178 77 190 52 190 53 184Z M99 177 L115 176 124 187 122 190 99 190Z" fill="#272735"/>
+<path d="M63 79 Q86 70 109 79 L125 127 112 143 62 141 48 124Z" fill="url(#c)"/>
+<path d="M60 82 L45 93 35 119 46 126 65 104 M112 83 L126 96 138 117 127 125 109 105" fill="#302b3c"/>
+<path d="M37 115 Q28 119 35 130 Q45 136 49 124 M129 115 Q140 111 144 123 Q139 135 129 127" fill="#e8b18e"/>
+<path d="M76 68 L75 82 88 91 101 81 99 66" fill="#e8b18e"/>
+<path d="M60 42 Q86 26 115 42 L113 61 Q106 79 88 80 Q67 76 61 61Z" fill="#e8b18e"/>
+<path d="M57 45 L55 23 73 31 81 14 92 29 111 17 107 35 123 30 117 49Z" fill="#e2deeb"/>
+<path d="M70 57 l10 -1 M97 56 l10 1" stroke="#39313b" stroke-width="3"/>
+<path d="M73 58 v4 M103 58 v4" stroke="#ff9954" stroke-width="3"/>
+<path d="M63 79 L78 91 68 128 53 139 50 100Z M105 79 L95 92 110 130 124 139 121 98Z" fill="#302b3c"/>
+<path d="M63 79 L78 91 68 128 M105 79 L95 92 110 130" fill="none" stroke="#c9ac68" stroke-width="2"/>
+<path d="M61 132 L113 132" stroke="#a88b57" stroke-width="5"/>
+<path d="M58 98 l6 -5 6 5 -2 9 -4 4 -4 -4Z" fill="#c6aa67" stroke-width="1"/>
+</g>
+<path d="M59 49 L83 47 86 61 62 63Z M91 47 L115 49 112 63 88 61Z" fill="#a265a8" stroke="#d7c8dc" stroke-width="3"/><path d="M81 52 L93 52" stroke="#d7c8dc" stroke-width="3"/><path d="M134 111 Q109 91 134 67 Q129 85 149 87 Q165 97 151 113Z" fill="#f17935"/><path d="M135 110 Q125 96 140 86 Q137 98 148 98 L145 110Z" fill="#ffe48a"/><path d="M40 161 L143 119" stroke="#956349" stroke-width="8"/><path d="M111 133 L145 119" stroke="#d9bd8b" stroke-width="13"/>
+</svg>

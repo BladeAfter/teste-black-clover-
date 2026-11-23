@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "touch_rotation": true,
+  "landscape_view": true,
+  "telegram_back": true,
+  "safe_area": true,
+  "errors": []
+}

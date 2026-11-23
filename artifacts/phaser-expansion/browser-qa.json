@@ -1,0 +1,132 @@
+{
+  "checks": [
+    {
+      "name": "engine ready",
+      "pass": true
+    },
+    {
+      "name": "installed Phaser version",
+      "pass": true
+    },
+    {
+      "name": "26 heroes and 5v5",
+      "pass": true
+    },
+    {
+      "name": "formation API",
+      "pass": true
+    },
+    {
+      "name": "pause stops combat time",
+      "pass": true
+    },
+    {
+      "name": "pause stops Phaser movement",
+      "pass": true
+    },
+    {
+      "name": "no horizontal overflow 540",
+      "pass": true
+    },
+    {
+      "name": "controls in viewport 540",
+      "pass": true
+    },
+    {
+      "name": "no horizontal overflow 390",
+      "pass": true
+    },
+    {
+      "name": "controls in viewport 390",
+      "pass": true
+    },
+    {
+      "name": "no horizontal overflow 480",
+      "pass": true
+    },
+    {
+      "name": "controls in viewport 480",
+      "pass": true
+    },
+    {
+      "name": "no horizontal overflow 1280",
+      "pass": true
+    },
+    {
+      "name": "controls in viewport 1280",
+      "pass": true
+    },
+    {
+      "name": "all five new heroes selectable group 0",
+      "pass": true
+    },
+    {
+      "name": "all new hero sprites sized correctly group 0",
+      "pass": true
+    },
+    {
+      "name": "enemy facing group 0",
+      "pass": true
+    },
+    {
+      "name": "all five new heroes selectable group 1",
+      "pass": true
+    },
+    {
+      "name": "all new hero sprites sized correctly group 1",
+      "pass": true
+    },
+    {
+      "name": "enemy facing group 1",
+      "pass": true
+    },
+    {
+      "name": "all five new heroes selectable group 2",
+      "pass": true
+    },
+    {
+      "name": "all new hero sprites sized correctly group 2",
+      "pass": true
+    },
+    {
+      "name": "enemy facing group 2",
+      "pass": true
+    },
+    {
+      "name": "all five new heroes selectable group 3",
+      "pass": true
+    },
+    {
+      "name": "all new hero sprites sized correctly group 3",
+      "pass": true
+    },
+    {
+      "name": "enemy facing group 3",
+      "pass": true
+    },
+    {
+      "name": "collection opens with26",
+      "pass": true
+    },
+    {
+      "name": "collection search",
+      "pass": true
+    },
+    {
+      "name": "battle advances after resume",
+      "pass": true
+    },
+    {
+      "name": "no browser runtime errors",
+      "pass": true
+    }
+  ],
+  "screenshots": [
+    "phaser-540x960.png",
+    "phaser-390x844.png",
+    "phaser-480x960.png",
+    "phaser-1280x800.png"
+  ],
+  "errors": [],
+  "pass": true
+}

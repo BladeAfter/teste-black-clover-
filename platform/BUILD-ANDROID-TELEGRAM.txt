@@ -1,0 +1,71 @@
+﻿ANDROID E TELEGRAM — CAVALEIROS DO GRIMORIO
+
+Comportamento
+- Home e demais abas: vertical, 720 x 1280.
+- Ao abrir Campanha: layout horizontal, 1280 x 720.
+- Ao voltar ao Reino: restaura vertical.
+- Android usa orientacao nativa sensor-landscape/sensor-portrait.
+- Telegram solicita tela cheia e usa Screen Orientation quando permitido.
+- Se o WebView continuar em pe, o proprio Godot gira o layout horizontal;
+  os eventos de toque usam a mesma transformacao da interface.
+- O botao Voltar do Telegram e o botao Android retornam ao Reino.
+
+Android
+Arquivo: build/android/clover-idle.apk
+APK de teste assinado com a chave debug do Godot. Nao e uma versao de loja.
+Pacote: com.allan.cloveridle
+Arquitetura: arm64-v8a. Android minimo 7.0 (API 24), alvo API 36.
+Foi gerado e a assinatura APK v2/v3 foi verificada com apksigner.
+Nao foi executado em aparelho Android fisico nesta sessao.
+Para gerar novamente:
+  Godot_v4.7.2-stable_win64_console.exe --headless --path . --export-debug Android build/android/clover-idle.apk
+Para publicar em loja, configurar chave release e pipeline de distribuicao.
+As chaves privadas nao estao no projeto nem no pacote Web.
+
+Telegram Mini App
+Pasta: build/telegram
+Pacote de distribuicao: build/telegram-mini-app.zip
+Exportacao Web real do Godot, com WebAssembly e WebGL 2, sem threads.
+1. Extraia o ZIP e hospede todos os arquivos juntos em um dominio HTTPS.
+2. Configure o servidor para servir .wasm como application/wasm.
+3. No BotFather, configure o Mini App/menu do seu bot com a URL HTTPS.
+4. Abra pelo Telegram Android e teste em um aparelho antes de distribuir.
+Nenhum bot ou endereco publico foi configurado automaticamente.
+O carregador inclui o SDK oficial https://telegram.org/js/telegram-web-app.js.
+Nao ha token de bot ou credencial no cliente.
+Os dados initData do Telegram nao sao usados como autenticacao neste prototipo.
+O progresso continua local em cada instalacao/origem, sem sincronizacao entre plataformas.
+
+Validacao
+- tools/home_qa.gd: navegacao, progressao, combate e retorno a orientacao vertical.
+- tools/telegram_browser_qa.py: exportacao real em Chrome com toque mobile,
+  API Telegram simulada, orientacao em pe/deitada, toque com transformacao,
+  BackButton e ausencia de erros de script.
+- artifacts/home-battle.png: captura horizontal do Godot.
+- artifacts/telegram-browser-qa.json: resultado da verificacao no navegador.
+- artifacts/android-export.log: log de geracao do APK.
+
+Fontes oficiais consultadas
+https://core.telegram.org/bots/webapps
+https://docs.godotengine.org/en/stable/classes/class_displayserver.html
+https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_android.html
+https://docs.godotengine.org/en/stable/tutorials/platform/web/customizing_html5_shell.html
+
+Card premium do jogador
+- Exibe avatar, nome, nivel da conta, VIP e progresso de experiencia.
+- Toque no card para editar o nome e escolher o avatar entre herois obtidos.
+- A escolha do avatar e salva no perfil.
+- O nivel do jogador e separado dos niveis dos herois: vitorias na campanha
+  concedem 75 XP e cada 100 XP aumenta um nivel da conta, ate o nivel 100.
+- Saves anteriores migram XP a partir das fases concluidas.
+- VIP mostra o valor salvo do perfil; padrao VIP 0, sem compras simuladas.
+
+Ajustes mobile de tela
+- Fundo cobre toda a janela, sem faixas cinza em telas 19.5:9 e 20:9.
+- HUD e dock ficam ancorados nas bordas seguras do aparelho.
+- Conteudo da tela anterior e recortado/removido durante a troca de orientacao.
+- Layout estabiliza apos o redimensionamento do WebView/Android.
+- Verificacoes no navegador: 360x640, 640x360, 412x915, 915x412,
+  393x852 e 852x393, incluindo toque real nos controles de batalha.
+- Previa local mobile: python tools/serve_mobile_preview.py
+  Endereco local: http://127.0.0.1:8765 (nao e uma publicacao no Telegram).

@@ -1,0 +1,10 @@
+CONTEUDO DE CAMPANHA E TORRE
+
+100 inimigos, 30 chefoes e 40 cenarios, com sprites e fundos gerados.
+Campanha: chefe e troca de cenario a cada 10 fases.
+Torre: chefe e troca de cenario a cada 5 andares.
+Catalogos ciclam ao terminar, com dificuldade crescente.
+Dados e intervalos: assets/encounters/catalog.json.
+Encontros definidos pela fase/andar, compativeis com saves anteriores.
+Verificacao: tools/encounters_qa.gd.
+Direcao de arte e prompts: assets/encounters/art-prompts.json.

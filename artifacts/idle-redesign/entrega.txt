@@ -1,0 +1,36 @@
+﻿REDESIGN IDLE 5V5 — 20/11/2026
+
+Alteracoes:
+- idle_layout.gd centraliza as vagas relativas ao viewport: 2 na frente, 3 atras por equipe. Espelhamento exato entre lados; qualquer heroi ocupa qualquer vaga.
+- A escala de referencia passou para 0.70 da anterior. Retaguarda usa fator de profundidade 0.96. Tamanhos individuais mantidos (Yami mais alto, Luck ligeiramente menor). Escala uniforme em X/Y.
+- O adaptador visual compensa o movimento logico antigo e anima uma aproximacao curta independente, voltando a mesma vaga.
+- Bounds do sprite completo ficam dentro do viewport, separados do cabecalho e dos cards.
+- Fundo preenche a tela com escala uniforme (cover), sem deformacao; formato e tamanho da tela recalculam formacoes, HUD e camera.
+- Cards e controles em uma faixa responsiva inferior, com HP e energia reais. Safe areas nativas sao consideradas em mobile.
+- Cabecalho mostra o numero real de unidades vivas por equipe e o tempo decorrido.
+- Ataque comum nao altera camera. Especial tem zoom maximo de 2.5%; ultimate visual ate 4.5%, com retorno ao centro.
+- Botao de especial seleciona o aliado vivo com mais energia para destacar sua proxima habilidade automatica. Nao antecipa casts, recargas ou gasto de energia.
+- Ultimate e uma entrada visual play("ultimate"), pronta para um evento equivalente no combate. Nenhuma habilidade nova foi inventada.
+- Auras passivas, cortes e impactos menores; flash de dano curto; numeros de dano usam a posicao visual do alvo.
+- A interface antiga de reinicio tinha IDs obsoletos. O adaptador agora reconecta esse botao para reiniciar as mesmas equipes exibidas.
+
+Arquivos da implementacao:
+scripts/visuals/idle_layout.gd (novo)
+scripts/visuals/animated_hero.gd
+scripts/visuals/arena_presentation.gd
+scripts/visuals/element_vfx.gd (apenas ordem de renderizacao dos VFX)
+tools/idle_visual_qa.gd (novo)
+
+Validacao:
+IDLE_QA PASS, failures=0, Godot 4.7.2, OpenGL Compatibility.
+Formatos renderizados: 540x960, 390x844, 480x960 e 600x1000; cada um usa altura logica correspondente ao seu aspecto, sem simular apenas 9:16.
+Verificacoes: 10 unidades, vagas 2+3, bounds sem intersecoes em repouso, sprites inteiros dentro da tela, separacao da HUD, escala uniforme, stats e home_position preservados.
+Ataque com aproximacao e retorno, camera fixa em ataque comum, zoom limitado de especial/ultimate com restauracao, pausa e 2x, derrota, vitoria, reinicio pelo botao real e HUD.
+Captura combat.png: batalha real em andamento, 810x1440.
+Simulacao headless: 3600 quadros a 60 fps (60 segundos), sem erros registrados.
+Comparacao SHA-256 de scripts/battle e scripts/autoload com o inicio da tarefa: COMBAT_FILES_UNCHANGED.
+
+Limites:
+As animacoes continuam baseadas em ilustracoes unicas com animacao de pose e VFX, sem spritesheets desenhadas quadro a quadro.
+Os dez sprites sao visiveis quando vivos; derrotados continuam sendo removidos conforme as regras existentes.
+A validacao foi feita em viewports de desktop. Insets de mobile sao suportados pelo codigo, mas falta validacao em aparelhos fisicos com recortes.

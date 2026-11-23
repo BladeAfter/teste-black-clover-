@@ -1,0 +1,30 @@
+[
+    {
+        "Path":  "C:\\Users\\Allan\\AFK arena\\scripts\\battle\\battle_manager.gd",
+        "Hash":  "FD4D712AC11D7847AD94162A2CEABEF0488BD535AA9E6B469C2F4F6EF1A8F59F"
+    },
+    {
+        "Path":  "C:\\Users\\Allan\\AFK arena\\scripts\\battle\\battle_scene.gd",
+        "Hash":  "B657AE84F124BD774A1C9961EE5070FD0CD1CEA266D834CAFFA96E13C51A1159"
+    },
+    {
+        "Path":  "C:\\Users\\Allan\\AFK arena\\scripts\\battle\\battle_ui.gd",
+        "Hash":  "EEA115357FE279C77DA97AAF26580DD90541073D9DCECFAA8C68A9F17EB56962"
+    },
+    {
+        "Path":  "C:\\Users\\Allan\\AFK arena\\scripts\\battle\\battle_unit.gd",
+        "Hash":  "01F524C766D2C1147CB59B3EB8F0839B6537C09A050AE7B7E48F892B9D580E6C"
+    },
+    {
+        "Path":  "C:\\Users\\Allan\\AFK arena\\scripts\\battle\\hero_visual.gd",
+        "Hash":  "1F6C9D01F33A1702676AA5C844C15195F6E99985F7BDB010D84A5F548D3F837C"
+    },
+    {
+        "Path":  "C:\\Users\\Allan\\AFK arena\\scripts\\autoload\\collection_registry.gd",
+        "Hash":  "5AAF2939096F2018BE27D931814DF3407ED79A2EDA9C2A76EE60B1F3B40FA6DE"
+    },
+    {
+        "Path":  "C:\\Users\\Allan\\AFK arena\\scripts\\autoload\\game_data.gd",
+        "Hash":  "C68D52D37CE81194FBF95A8BB1B45E7B0993E83AAF8084F28814A829C74C5C06"
+    }
+]

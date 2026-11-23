@@ -1,0 +1,26 @@
+BLACK CLOVER — CAVALEIROS DO GRIMÓRIO
+Generation mode: built-in image_gen tool, imagegen skill.
+Character art: pre-rendered 3D Chibi Anime, used as transparent sprites.
+These are raster assets, not rigged 3D models.
+
+OUTPUT: heroes-atlas.png
+Transparent PNG, 1536 x 1024. Six 512 x 512 cells, row-major:
+Asta, Yuno, Noelle, Yami, Magna, Luck.
+Godot AtlasTexture references each cell directly; original alpha is preserved.
+
+FINAL PROMPT — CHARACTER ATLAS
+Use case: stylized-concept. Asset type: production game character atlas for a Black Clover idle RPG. Create ONE transparent PNG atlas, 3 columns by 2 rows of six separate full-body characters, each centered in its equal rectangular cell, with generous transparent margins and no overlap. EXACT order: top row Asta, Yuno, Noelle Silva; bottom row Yami Sukehiro, Magna Swing, Luck Voltia. High quality 3D Chibi Anime rendered figurines, detailed expressive large anime eyes, oversized heads, short bodies, actual recognizable anime costumes and silhouettes. Asta: silver spiky hair, black headband with red insignia, Black Bulls black gold cape, navy clothes, massive battered black Demon Slayer sword, determined green eyes. Yuno: tousled black hair, golden eyes, cream and blue Golden Dawn cape, green wind magic and floating grimoire. Noelle: long silver twin tails, purple eyes, white and lavender royal mage dress, Black Bulls cape, blue water orb. Yami: muscular tan man, messy black hair, stubble, white tank top, dark pants, black gold Black Bulls shoulder cape, katana. Magna: swept silver hair with dark shaved sides, sunglasses, black gold Black Bulls robe, fireball and baseball bat. Luck: messy blond hair, smiling blue eyes, blue tunic and black gold Black Bulls cape, electric lightning gauntlets. Three-quarter front battle-ready view facing slightly right. Studio soft light, rich shaded materials, premium mobile RPG hero quality. No text, no interface, no background, no ground plane, no grid lines. All six characters complete head to toe with feet, weapons must stay inside their own cells. Transparent background.
+
+OUTPUT: clover-forest.png
+FINAL PROMPT — CAMPAIGN ENVIRONMENT
+Use case: stylized-concept. Asset type: wide landscape background for a premium Black Clover idle heroes mobile RPG. A beautifully polished hand painted fantasy anime forest battle clearing near Hage village in Clover Kingdom, a distant medieval castle with tall spires on a sunlit mountain, turquoise river and waterfall, enormous ancient trees, lush jade and emerald vegetation with blue flowers and glowing magical motes, warm golden afternoon rays. Landscape 3:2 composition. Broad empty gently sloped grassy stone-paved clearing occupies lower 65 percent for character battle placement, darker vignette of roots leaves and stones at the extreme foreground edges, layered depth, elegant vibrant painterly mobile fantasy RPG environment, intricate detail, soft 3D rendered forms blended with painted textures. Camera looking slightly down from three-quarter frontal battle view. No characters, no creatures, no text, no UI, no icons. Rich illustrated production environment, not primitive geometry.
+
+OUTPUT: grimoire-tower.png
+FINAL PROMPT — SUMMONING ENVIRONMENT
+Use case: stylized-concept. Asset type: landscape game summoning room background for a Black Clover idle heroes RPG. Wide interior of an ancient medieval stone grimoire tower, gorgeous hand painted high-end fantasy mobile RPG environment, vaulted arches and thick carved stone columns at left and right, huge arched window in the back showing indigo night sky and distant Clover Kingdom castle, floating candles, piles of old magical books near the edges, a circular raised stone summoning dais centered slightly right at x=60 percent y=70 percent, luminous turquoise blue magic circle hovering above dais, intricate concentric arcane circles and a four-leaf clover glowing rune, blue magical particles and golden starlight, purple and blue stone shadows, dramatic ethereal lighting, ornate but readable, polished illustrated 3D fantasy art. Keep left 30 percent darker and visually calm for interface overlays. No characters, no text, no UI, no buttons, no icons. Landscape 3:2.
+
+VALIDATION
+Godot 4.7.2. Run: godot --headless --path . --script res://tools/clover_qa.gd
+Graphical screenshots: run the same command without --headless.
+Screenshots are saved to artifacts/idle-clover-*.png.
+QA uses an isolated save and does not alter the player's progress.

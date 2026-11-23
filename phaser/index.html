@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>AFK Arena - Black Clover</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="game-container">
+ <div id="phaser-canvas"></div>
+
+ <!-- Loading overlay -->
+ <div id="load-overlay" class="load-overlay">
+ <div class="spinner"></div>
+ <div>Loading assets...</div>
+ </div>
+
+ <!-- HUD top -->
+ <div class="hud-layer hud-top">
+ <span id="alive-count">5v5</span>
+ <span id="timer">0:00</span>
+ </div>
+
+ <!-- HUD bottom -->
+ <div class="hud-layer hud-bottom">
+ <!-- Player cards -->
+ <div class="card-row" id="player-cards"></div>
+ <!-- Controls -->
+ <div class="control-bar">
+ <button class="ctrl-btn" id="btn-auto">AUTO</button>
+ <button class="ctrl-btn" id="btn-speed">1x</button>
+ <button class="ctrl-btn" id="btn-pause">PAUSE</button>
+ <button class="ctrl-btn special" id="btn-collection">ROSTER</button>
+ </div>
+ </div>
+
+ <!-- Roster drawer -->
+ <div class="roster-overlay" id="roster-overlay">
+ <div class="roster-panel">
+ <div class="roster-header">
+ <span>Collection</span>
+ <button class="ctrl-btn" id="roster-close" style="min-width:36px;padding:6px 10px;">✕</button>
+ </div>
+ <input class="roster-search" id="roster-search" placeholder="Search heroes..." type="text">
+ <div class="roster-grid" id="roster-grid"></div>
+ <div class="roster-footer">
+ <button class="ctrl-btn" id="roster-cancel">Cancel</button>
+ <button class="ctrl-btn special" id="roster-apply">Apply</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- Result modal -->
+ <div class="result-modal" id="result-modal">
+ <div class="result-box">
+ <h2 id="result-title">Victory!</h2>
+ <p id="result-time">Time: 0:00</p>
+ <button class="ctrl-btn special" id="btn-restart">Restart</button>
+ </div>
+ </div>
+</div>
+
+<script src="/vendor/phaser.js"></script>
+<script type="module" src="main.js"></script>
+<script type="module">
+// HUD controller - bridges Phaser battle state to HTML overlay
+const playerCardsEl = document.getElementById('player-cards');
+const aliveEl = document.getElementById('alive-count');
+const timerEl = document.getElementById('timer');
+const btnAuto = document.getElementById('btn-auto');
+const btnSpeed = document.getElementById('btn-speed');
+const btnPause = document.getElementById('btn-pause');
+const btnCollection = document.getElementById('btn-collection');
+const loadOverlay = document.getElementById('load-overlay');
+const resultModal = document.getElementById('result-modal');
+const resultTitle = document.getElementById('result-title');
+const resultTime = document.getElementById('result-time');
+const btnRestart = document.getElementById('btn-restart');
+const rosterOverlay = document.getElementById('roster-overlay');
+const rosterGrid = document.getElementById('roster-grid');
+const rosterSearch = document.getElementById('roster-search');
+const rosterClose = document.getElementById('roster-close');
+const rosterCancel = document.getElementById('roster-cancel');
+const rosterApply = document.getElementById('roster-apply');
+
+let rosterData = null;
+let tempFormation = null;
+let selectedSlot = -1; // which player slot we're replacing
+
+// Fetch roster for HUD
+fetch('/phaser/roster.json').then(r => r.json()).then(data => {
+ rosterData = data;
+ loadOverlay.classList.add('hidden');
+}).catch(() => {});
+
+// Battle state updates
+window.addEventListener('battle-state', (e) => {
+ const s = e.detail;
+ if (!s) return;
+
+ // Timer
+ const mins = Math.floor(s.elapsed / 60);
+ const secs = Math.floor(s.elapsed % 60);
+ timerEl.textContent = `${mins}:${secs.toString().padStart(2,'0')}`;
+
+ // Alive count
+ const pAlive = s.player.filter(u => !u.isDead).length;
+ const eAlive = s.enemy.filter(u => !u.isDead).length;
+ aliveEl.textContent = `${pAlive}v${eAlive}`;
+
+ // Update player cards
+ _renderCards(s.player);
+
+ // Sync button states
+ btnAuto.classList.toggle('active', s.autoSkill);
+ btnSpeed.textContent = s.speed >= 2 ? '2x' : '1x';
+ btnSpeed.classList.toggle('active', s.speed >= 2);
+ btnPause.textContent = s.paused ? 'PLAY' : 'PAUSE';
+ btnPause.classList.toggle('active', s.paused);
+});
+
+window.addEventListener('battle-result', (e) => {
+ const w = e.detail?.winner;
+ resultTitle.textContent = w === 'player' ? 'Victory!' : 'Defeat';
+ resultTitle.style.color = w === 'player' ? '#d4af37' : '#e74c3c';
+ const ig = window.__idleGame;
+ const elapsed = ig?.model?.elapsed || 0;
+ const mins = Math.floor(elapsed / 60);
+ const secs = Math.floor(elapsed % 60);
+ resultTime.textContent = `Time: ${mins}:${secs.toString().padStart(2,'0')}`;
+ resultModal.classList.add('open');
+});
+
+function _renderCards(playerUnits) {
+ if (!rosterData) return;
+ const heroMap = new Map(rosterData.heroes.map(h => [h.id, h]));
+ playerCardsEl.innerHTML = '';
+ playerUnits.forEach((u, i) => {
+ const hero = heroMap.get(u.id);
+ if (!hero) return;
+ const card = document.createElement('div');
+ card.className = 'hero-card' + (u.isDead ? ' dead' : '');
+ card.dataset.id = u.id;
+ card.dataset.slot = i;
+
+ const hpPct = u.maxHp > 0 ? (u.hp / u.maxHp * 100) : 0;
+ const enPct = u.energyMax > 0 ? (u.energy / u.energyMax * 100) : 0;
+
+ card.innerHTML = `
+ <div class="portrait"><img src="${hero.image}" alt="${hero.name}" loading="lazy"></div>
+ <div class="bars">
+ <div class="bar-track"><div class="bar-fill hp" style="width:${hpPct}%"></div></div>
+ <div class="bar-track"><div class="bar-fill energy" style="width:${enPct}%"></div></div>
+ </div>
+ <div class="name">${hero.name}</div>
+ `;
+
+ card.addEventListener('click', () => {
+ if (u.isDead) return;
+ // Manual skill trigger
+ window.__idleGame?.manualSkill?.(u.id);
+ });
+
+ playerCardsEl.appendChild(card);
+ });
+}
+
+// Controls
+btnAuto.addEventListener('click', () => {
+ const ig = window.__idleGame;
+ if (ig?.model) {
+ ig.model.setAutoSkill(!ig.model.autoSkill);
+ _savePrefs();
+ }
+});
+
+btnSpeed.addEventListener('click', () => {
+ const ig = window.__idleGame;
+ if (ig?.model) {
+ const next = ig.model.speedMultiplier >= 2 ? 1 : 2;
+ ig.model.setSpeed(next);
+ _savePrefs();
+ }
+});
+
+btnPause.addEventListener('click', () => {
+ const ig = window.__idleGame;
+ if (ig?.model) {
+ ig.model.setPaused(!ig.model.paused);
+ }
+});
+
+btnRestart.addEventListener('click', () => {
+ resultModal.classList.remove('open');
+ window.__idleGame?.restart?.();
+});
+
+// Roster drawer
+btnCollection.addEventListener('click', () => {
+ if (!rosterData) return;
+ const ig = window.__idleGame;
+ tempFormation = [...(ig?.scene?.playerIds || [])];
+ selectedSlot = -1;
+ _renderRosterGrid();
+ rosterOverlay.classList.add('open');
+});
+
+rosterClose.addEventListener('click', () => rosterOverlay.classList.remove('open'));
+rosterCancel.addEventListener('click', () => rosterOverlay.classList.remove('open'));
+
+rosterSearch.addEventListener('input', () => _renderRosterGrid());
+
+rosterApply.addEventListener('click', () => {
+ if (!tempFormation || tempFormation.length === 0) return;
+ const ig = window.__idleGame;
+ // Pick random enemies excluding player picks
+ const allIds = rosterData.heroes.map(h => h.id);
+ const enemyPool = allIds.filter(id => !tempFormation.includes(id));
+ const shuffled = enemyPool.sort(() => Math.random() - 0.5).slice(0, 5);
+ ig?.setFormation?.(tempFormation.slice(0, 5), shuffled);
+ rosterOverlay.classList.remove('open');
+ resultModal.classList.remove('open');
+});
+
+function _renderRosterGrid() {
+ if (!rosterData) return;
+ const query = (rosterSearch.value || '').toLowerCase();
+ rosterGrid.innerHTML = '';
+ rosterData.heroes.forEach(h => {
+ if (query && !h.name.toLowerCase().includes(query) && !h.element.toLowerCase().includes(query)) return;
+ const item = document.createElement('div');
+ const inTeam = tempFormation?.includes(h.id);
+ item.className = 'roster-item' + (inTeam ? ' in-team' : '');
+ item.innerHTML = `
+ <div class="thumb"><img src="${h.image}" alt="${h.name}" loading="lazy"></div>
+ <div class="rname">${h.name}</div>
+ `;
+ item.addEventListener('click', () => {
+ if (!tempFormation) return;
+ // If already in team, remove; else replace first available or add
+ const idx = tempFormation.indexOf(h.id);
+ if (idx >= 0) {
+ // Don't remove below 1
+ if (tempFormation.length <= 1) return;
+ tempFormation.splice(idx, 1);
+ } else {
+ if (tempFormation.length < 5) {
+ tempFormation.push(h.id);
+ } else {
+ // Replace last slot
+ tempFormation[4] = h.id;
+ }
+ }
+ _renderRosterGrid();
+ });
+ rosterGrid.appendChild(item);
+ });
+}
+
+function _savePrefs() {
+ try {
+ const ig = window.__idleGame;
+ if (!ig?.model) return;
+ const prefs = JSON.parse(localStorage.getItem('afk-phaser-prefs') || '{}');
+ prefs.autoSkill = ig.model.autoSkill;
+ prefs.speed = ig.model.speedMultiplier;
+ localStorage.setItem('afk-phaser-prefs', JSON.stringify(prefs));
+ } catch {}
+}
+</script>
+</body>
+</html>

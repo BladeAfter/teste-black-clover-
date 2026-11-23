@@ -1,0 +1,24 @@
+# Godot
+.godot/
+*.translation
+
+# Node/Phaser (not part of the Godot game)
+node_modules/
+package.json
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build
+build/
+export/

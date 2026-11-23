@@ -1,0 +1,101 @@
+﻿ID;Nome;Raridade;Elemento;Classe;Golpe
+6;Kael;Incomum;Fogo;Guerreiro;Lâmina de Fogo
+7;Ignia;Incomum;Fogo;Mago;Espiral de Fogo
+8;Brann;Raro;Fogo;Guardião;Bastião de Fogo
+9;Cindra;Raro;Fogo;Assassino;Dança das Adagas de Fogo
+10;Orven;Raro;Fogo;Mago;Cataclismo de Fogo
+11;Solara;Épico;Fogo;Guerreiro;Lança de Fogo
+12;Ravel;Épico;Fogo;Arqueiro;Flecha de Fogo
+13;Ambera;Épico;Fogo;Suporte;Bênção de Fogo
+14;Danteo;Lendário;Fogo;Lutador;Punho de Fogo
+15;Seraphina;Lendário;Fogo;Mago;Julgamento de Fogo
+16;Nerio;Incomum;Água;Guerreiro;Lâmina de Água
+17;Marielle;Incomum;Água;Mago;Espiral de Água
+18;Borgan;Raro;Água;Guardião;Bastião de Água
+19;Talia;Raro;Água;Assassino;Dança das Adagas de Água
+20;Ondren;Raro;Água;Mago;Cataclismo de Água
+21;Coralia;Épico;Água;Guerreiro;Lança de Água
+22;Pelian;Épico;Água;Arqueiro;Flecha de Água
+23;Nymia;Épico;Água;Suporte;Bênção de Água
+24;Torran;Lendário;Água;Lutador;Punho de Água
+25;Aqualis;Lendário;Água;Mago;Julgamento de Água
+26;Zephir;Incomum;Vento;Guerreiro;Lâmina de Vento
+27;Aelina;Incomum;Vento;Mago;Espiral de Vento
+28;Galdor;Raro;Vento;Guardião;Bastião de Vento
+29;Veyra;Raro;Vento;Assassino;Dança das Adagas de Vento
+30;Eolmar;Raro;Vento;Mago;Cataclismo de Vento
+31;Sylphia;Épico;Vento;Guerreiro;Lança de Vento
+32;Arvent;Épico;Vento;Arqueiro;Flecha de Vento
+33;Celina;Épico;Vento;Suporte;Bênção de Vento
+34;Tavren;Lendário;Vento;Lutador;Punho de Vento
+35;Aurelia;Lendário;Vento;Mago;Julgamento de Vento
+36;Doran;Incomum;Terra;Guerreiro;Lâmina de Terra
+37;Petra;Incomum;Terra;Mago;Espiral de Terra
+38;Granvik;Raro;Terra;Guardião;Bastião de Terra
+39;Sienna;Raro;Terra;Assassino;Dança das Adagas de Terra
+40;Rochan;Raro;Terra;Mago;Cataclismo de Terra
+41;Terrina;Épico;Terra;Guerreiro;Lança de Terra
+42;Flint;Épico;Terra;Arqueiro;Flecha de Terra
+43;Adara;Épico;Terra;Suporte;Bênção de Terra
+44;Basalt;Lendário;Terra;Lutador;Punho de Terra
+45;Georia;Lendário;Terra;Mago;Julgamento de Terra
+46;Raiken;Incomum;Relâmpago;Guerreiro;Lâmina de Relâmpago
+47;Voltara;Incomum;Relâmpago;Mago;Espiral de Relâmpago
+48;Thorgun;Raro;Relâmpago;Guardião;Bastião de Relâmpago
+49;Zyra;Raro;Relâmpago;Assassino;Dança das Adagas de Relâmpago
+50;Fulgar;Raro;Relâmpago;Mago;Cataclismo de Relâmpago
+51;Electra;Épico;Relâmpago;Guerreiro;Lança de Relâmpago
+52;Veyron;Épico;Relâmpago;Arqueiro;Flecha de Relâmpago
+53;Lumira;Épico;Relâmpago;Suporte;Bênção de Relâmpago
+54;Storman;Lendário;Relâmpago;Lutador;Punho de Relâmpago
+55;Raelia;Lendário;Relâmpago;Mago;Julgamento de Relâmpago
+56;Iskar;Incomum;Gelo;Guerreiro;Lâmina de Gelo
+57;Nevia;Incomum;Gelo;Mago;Espiral de Gelo
+58;Frostan;Raro;Gelo;Guardião;Bastião de Gelo
+59;Cryssa;Raro;Gelo;Assassino;Dança das Adagas de Gelo
+60;Glacien;Raro;Gelo;Mago;Cataclismo de Gelo
+61;Eirwen;Épico;Gelo;Guerreiro;Lança de Gelo
+62;Nivor;Épico;Gelo;Arqueiro;Flecha de Gelo
+63;Alva;Épico;Gelo;Suporte;Bênção de Gelo
+64;Hailan;Lendário;Gelo;Lutador;Punho de Gelo
+65;Ysilra;Lendário;Gelo;Mago;Julgamento de Gelo
+66;Lucan;Incomum;Luz;Guerreiro;Lâmina de Luz
+67;Aurielle;Incomum;Luz;Mago;Espiral de Luz
+68;Helion;Raro;Luz;Guardião;Bastião de Luz
+69;Elara;Raro;Luz;Assassino;Dança das Adagas de Luz
+70;Dayron;Raro;Luz;Mago;Cataclismo de Luz
+71;Solenna;Épico;Luz;Guerreiro;Lança de Luz
+72;Lior;Épico;Luz;Arqueiro;Flecha de Luz
+73;Clariel;Épico;Luz;Suporte;Bênção de Luz
+74;Phoeran;Lendário;Luz;Lutador;Punho de Luz
+75;Luxara;Lendário;Luz;Mago;Julgamento de Luz
+76;Noctis;Incomum;Trevas;Guerreiro;Lâmina de Trevas
+77;Nyxara;Incomum;Trevas;Mago;Espiral de Trevas
+78;Duskhan;Raro;Trevas;Guardião;Bastião de Trevas
+79;Umbra;Raro;Trevas;Assassino;Dança das Adagas de Trevas
+80;Morthen;Raro;Trevas;Mago;Cataclismo de Trevas
+81;Vespera;Épico;Trevas;Guerreiro;Lança de Trevas
+82;Ravik;Épico;Trevas;Arqueiro;Flecha de Trevas
+83;Nerissa;Épico;Trevas;Suporte;Bênção de Trevas
+84;Tenebran;Lendário;Trevas;Lutador;Punho de Trevas
+85;Eclipsia;Lendário;Trevas;Mago;Julgamento de Trevas
+86;Sylvan;Incomum;Natureza;Guerreiro;Lâmina de Natureza
+87;Florielle;Incomum;Natureza;Mago;Espiral de Natureza
+88;Oakren;Raro;Natureza;Guardião;Bastião de Natureza
+89;Thalya;Raro;Natureza;Assassino;Dança das Adagas de Natureza
+90;Verdan;Raro;Natureza;Mago;Cataclismo de Natureza
+91;Lysena;Épico;Natureza;Guerreiro;Lança de Natureza
+92;Briar;Épico;Natureza;Arqueiro;Flecha de Natureza
+93;Roselia;Épico;Natureza;Suporte;Bênção de Natureza
+94;Thornan;Lendário;Natureza;Lutador;Punho de Natureza
+95;Gaiana;Lendário;Natureza;Mago;Julgamento de Natureza
+96;Azer;Incomum;Antimagia;Guerreiro;Lâmina de Antimagia
+97;Valkira;Incomum;Antimagia;Mago;Espiral de Antimagia
+98;Bastion;Raro;Antimagia;Guardião;Bastião de Antimagia
+99;Kuroha;Raro;Antimagia;Assassino;Dança das Adagas de Antimagia
+100;Nullen;Raro;Antimagia;Mago;Cataclismo de Antimagia
+101;Revena;Épico;Antimagia;Guerreiro;Lança de Antimagia
+102;Silas;Épico;Antimagia;Arqueiro;Flecha de Antimagia
+103;Abyssia;Épico;Antimagia;Suporte;Bênção de Antimagia
+104;Zerkan;Lendário;Antimagia;Lutador;Punho de Antimagia
+105;Oblivienne;Lendário;Antimagia;Mago;Julgamento de Antimagia

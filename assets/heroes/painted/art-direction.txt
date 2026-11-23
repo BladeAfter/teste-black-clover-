@@ -1,0 +1,23 @@
+﻿V2 — DIRECAO DE ARTE E ASSETS
+Gerados com a ferramenta integrada image_gen, em 20/11/2026.
+Arquivos copiados para o projeto; os originais permanecem em C:/Users/Allan/.codex/generated_images/01a1fa3a-ab71-7cd2-93db-16516952dac2/.
+
+Prompt comum dos personagens:
+Use case stylized-concept. Actual full-body transparent battle sprite for a Godot 2D Black Clover auto-battler. Premium hand-painted anime fantasy mobile RPG illustration, nuanced cel shading, sophisticated ink contours, detailed fabric, metal and leather. Normal anime proportions, NOT chibi, NOT flat vector. Three-quarter battle-ready stance facing RIGHT, full figure and weapons visible with transparent margin, detailed face and hands, upper-left sunlight and cool shadow fill. Genuine transparent alpha background, no scenery, no floor, no text, no UI, no frame, no watermark. Only small close elemental effects; large effects rendered in-engine.
+
+Sujeitos dos prompts:
+asta.png — Asta, muscular young swordsman; ash-silver spiky hair, black headband with red emblem, green eyes, short black Black Bulls mantle with gold insignia, black-and-cream outfit, brown belt and heavy boots. Massive battered black Demon Slayer sword diagonally down-forward right; determined ready stance. Approximately 6-heads tall.
+yuno.png — Yuno, slender athletic wind mage; tousled black hair, amber eyes, cream gold-embroidered high-collar tunic, emerald pendant, dark fitted trousers, brown boots, flowing teal-green cape. Extended right casting hand, floating green grimoire near left hand and close green wind ribbons. Approximately 6.5-heads tall.
+noelle.png — Noelle Silva, silver twin ponytails, violet eyes, white royal-blue gold-detailed battle dress, short black Black Bulls cloak, white gloves and tall white-blue boots. One hand casting, other holding silver staff with blue crystal, close blue water filaments, graceful determined face. Approximately 6.5-heads tall.
+yami.png — Yami Sukehiro, tall powerful adult swordsman, short tousled black hair, stubble and cigarette. Tight off-white sleeveless tank, rugged brown belted trousers and black boots, black gold-trimmed mantle over one shoulder. Katana forward right with subtle violet glint, relaxed powerful stance, approximately 7-heads tall.
+magna.png — Magna Swing, athletic delinquent fire mage, swept-back ash-grey/dark-rooted hair, angular purple sunglasses and cocky grin. Black sleeveless gold-detailed Black Bulls biker mantle, dark shirt, tan belts and gloves, cropped dark trousers and rugged boots. Bent-knee combat stance and compact orange fireball at one fist. Approximately 6.5-heads tall.
+luck.png — Luck Voltia, lean youthful blond lightning brawler, blue eyes and cheerful wild battle grin. Royal-blue gold-trimmed tunic, black Black Bulls shoulder mantle, dark fitted trousers and tall brown boots. Energetic bent-knee fighting stance, one fist forward, small yellow-blue lightning gauntlets and sparks near boots. Approximately 6-heads tall.
+
+Cenario — assets/backgrounds/clover_courtyard.png:
+Empty professional painted anime fantasy portrait battle arena. Broad worn pale-stone courtyard, subtle engraved golden magic circle and sprigs of grass; broken gothic arches and ivy-covered columns at edges, black-and-gold clover banners. Upper third contains ornate floating European magical castle, suspended rocky islands, waterfalls, vivid blue sky and white clouds. Elevated three-quarter perspective. Cool blue-grey stone, green ivy, warm gold, purple corner shadows, original detailed hand-painted environment with atmospheric depth. No characters, creatures, interface, lettering or watermark.
+
+Integracao:
+Asta foi importado e capturado no Godot antes da substituicao dos demais.
+Os retratos da HUD usam as mesmas texturas, recortadas pelo componente Control/Sprite2D.
+Os SVGs chibi antigos permanecem como fallback de compatibilidade; nao sao usados pelos seis herois atuais.
+O arquivo hero_card_gold.svg e UI vetorial original, criado como moldura para a arte raster.

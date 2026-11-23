@@ -1,0 +1,140 @@
+[
+    {
+        "id":  "asta",
+        "width":  1145,
+        "height":  1374,
+        "transparent_samples":  49
+    },
+    {
+        "id":  "charlotte",
+        "width":  1199,
+        "height":  1312,
+        "transparent_samples":  46
+    },
+    {
+        "id":  "charmy",
+        "width":  1233,
+        "height":  1275,
+        "transparent_samples":  50
+    },
+    {
+        "id":  "finral",
+        "width":  1024,
+        "height":  1536,
+        "transparent_samples":  53
+    },
+    {
+        "id":  "fuegoleon",
+        "width":  1218,
+        "height":  1292,
+        "transparent_samples":  42
+    },
+    {
+        "id":  "gauche",
+        "width":  1024,
+        "height":  1536,
+        "transparent_samples":  0
+    },
+    {
+        "id":  "gordon",
+        "width":  1199,
+        "height":  1312,
+        "transparent_samples":  45
+    },
+    {
+        "id":  "grey",
+        "width":  1198,
+        "height":  1313,
+        "transparent_samples":  49
+    },
+    {
+        "id":  "julius",
+        "width":  1024,
+        "height":  1536,
+        "transparent_samples":  34
+    },
+    {
+        "id":  "leopold",
+        "width":  1216,
+        "height":  1293,
+        "transparent_samples":  47
+    },
+    {
+        "id":  "luck",
+        "width":  1312,
+        "height":  1199,
+        "transparent_samples":  49
+    },
+    {
+        "id":  "magna",
+        "width":  1199,
+        "height":  1312,
+        "transparent_samples":  48
+    },
+    {
+        "id":  "mereoleona",
+        "width":  1222,
+        "height":  1287,
+        "transparent_samples":  40
+    },
+    {
+        "id":  "mimosa",
+        "width":  1222,
+        "height":  1287,
+        "transparent_samples":  52
+    },
+    {
+        "id":  "nacht",
+        "width":  1024,
+        "height":  1536,
+        "transparent_samples":  39
+    },
+    {
+        "id":  "noelle",
+        "width":  1199,
+        "height":  1312,
+        "transparent_samples":  46
+    },
+    {
+        "id":  "nozel",
+        "width":  1217,
+        "height":  1293,
+        "transparent_samples":  46
+    },
+    {
+        "id":  "secre",
+        "width":  1199,
+        "height":  1312,
+        "transparent_samples":  47
+    },
+    {
+        "id":  "vanessa",
+        "width":  1024,
+        "height":  1536,
+        "transparent_samples":  46
+    },
+    {
+        "id":  "william",
+        "width":  1024,
+        "height":  1536,
+        "transparent_samples":  0
+    },
+    {
+        "id":  "yami",
+        "width":  1192,
+        "height":  1320,
+        "transparent_samples":  53
+    },
+    {
+        "id":  "yuno",
+        "width":  1122,
+        "height":  1402,
+        "transparent_samples":  46
+    },
+    {
+        "id":  "zora",
+        "width":  1214,
+        "height":  1295,
+        "transparent_samples":  50
+    }
+]

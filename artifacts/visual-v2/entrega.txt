@@ -1,0 +1,27 @@
+﻿REVISAO VISUAL V2
+A substituicao dos chibis foi solicitada por divergencia em relacao a referencia.
+
+Entregue:
+- Seis PNGs de personagens com alpha em assets/heroes/painted/.
+- Cenario pintado assets/backgrounds/clover_courtyard.png.
+- Moldura ornamentada assets/ui/hero_card_gold.svg.
+- Retratos recortados da nova arte, HP e energia vinculados ao combate.
+- Layout visual ampliado e distribuido verticalmente; as posicoes logicas e formulas de combate nao foram alteradas.
+- VFX redimensionados, auras por elemento e numeros de dano na posicao visual correta.
+- Sprites usam filtragem linear e mipmaps.
+
+Scripts modificados nesta revisao:
+scripts/visuals/animated_hero.gd
+scripts/visuals/arena_presentation.gd
+scripts/visuals/element_vfx.gd
+Nenhum arquivo de logica de combate foi editado nesta revisao.
+
+Validacao:
+tools/visual_qa_v2.gd — spawn 5v5, PNGs carregados, estados, velocidade, pausa, estados finais e reinicio.
+Capturas 540x960 e 720x1280; captura de batalha em andamento 810x1440.
+Simulacao headless de 3600 quadros a 60 fps.
+Logs de execucao nesta pasta.
+Arte criada com image_gen integrado. Direcao e conjunto de prompts: assets/heroes/painted/art-direction.txt.
+
+Limite atual:
+Cada personagem pintado usa uma unica ilustracao para animacao de pose, deslocamento e efeitos. Ainda nao possui spritesheet quadro a quadro nem rig de partes pintadas. Portanto, esta revisao melhora substancialmente arte e composicao, mas nao reproduz integralmente a animacao e acabamento da referencia.

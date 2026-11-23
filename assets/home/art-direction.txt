@@ -1,0 +1,59 @@
+PREMIUM PORTRAIT HOME — BLACK CLOVER / CAVALEIROS DO GRIMÓRIO
+
+Mode: built-in image_gen, imagegen skill.
+Assets saved in this directory:
+  kingdom-portrait.png — continuous portrait kingdom illustration, without UI.
+  icons-atlas.png — active standardized generated menu artwork (16 cells).
+  resources-atlas.png — generated coin, diamond, essence and rarity star (4 cells).
+  text-plaque.png — shared, generated empty frame for every text button.
+  player-card.png — generated gold/plum player card frame; all profile data is live.
+
+The reference image supplied by the user determines layout and visual direction.
+All text, currency values, touch targets and frames are
+independent Godot controls. The background does not contain functional UI.
+The clarified requirement retains illustrated menu artwork and replaces emoji
+and font-based pictograms with generated raster art. No text glyph is used as
+a currency, power, rarity or navigation icon. Button states use plain text.
+Hero illustrations and the kingdom environment are retained as game artwork.
+The bottom navigation is a compact shared gold/plum dock with five main
+destinations: Heroes, Bag, Formation, Evolution and Shop. Generated artwork
+is retained with smaller silhouettes, subtle separators and one active marker.
+Missions and Achievements remain available through the secondary Journey entry.
+The app starts at scenes/premium_home.tscn in portrait 720 x 1280.
+scripts/home_scene.gd composes the HUD, resource bars, quick menu, event banners,
+interactive locations, bottom navigation and portrait destinations.
+scripts/visuals/premium_button.gd draws ornamental, scalable gold frames.
+scripts/visuals/home_effects.gd adds water shimmer, portal arcs, drifting petals,
+cloud wisps and golden motes. None of these layers intercepts input.
+The existing clover_idle.gd roster, save path, AFK accrual and combat are reused.
+Arena, tower, clan and boss modes explicitly report unavailable rather than
+pretending a server or implemented game system exists.
+
+FINAL PROMPT — KINGDOM
+Use case: stylized-concept. Asset type: final portrait 9:16 mobile idle fantasy RPG HOME ENVIRONMENT, NO USER INTERFACE OR TEXT. Create a single cohesive beautifully polished premium stylized 3D anime fantasy kingdom, spectacular quality like a finished high-end AFK idle heroes game. Vertical composition: main majestic white stone castle with cobalt-blue conical rooftops on a floating rocky island in the upper center around x50% y26%, blue summer sky and white clouds, smaller distant floating islands, lush green cliffs, brilliant cascading turquoise waterfalls, stone bridges, pink cherry blossom trees. Carefully place separate visually distinct interactive landmarks around the main scene: narrow luminous PURPLE GOTHIC TOWER on a small floating island at x27% y36%; GOLDEN STONE COLISEUM with red flags on island at x78% y39%; PURPLE SUMMONING PORTAL between ornate crystal pillars at x18% y51%; SMALL GUILD FORTRESS with crimson gold clover banners at x65% y52%; BLACK CRIMSON DRAGON perched around fiery orange magic portal at x87% y56%; SECOND VIOLET CRYSTAL FUSION PORTAL at x19% y68%; warm red and gold medieval MARKET PAVILION at x82% y71%. Main central foreground focus is huge elegant sculpted GOLDEN FOUR LEAF CLOVER MONUMENT glowing above golden circular magic dais at x50% y63%, reached by a monumental beautiful stone staircase descending toward viewer through lower 75-93% of the image. Keep clear sky at top 0-16% for HUD and open courtyard at bottom 91-100% for navigation overlay. Warm sunlight, cinematic atmospheric depth, saturated royal blue, emerald green, lilac, pink blossom and luminous gold, intricate polished stone and metal material. Continuous landscape, not separate asset collage. NO PEOPLE, NO ANIME CHARACTERS, NO TEXT, NO LABELS, NO BUTTONS, NO ICONS, NO UI, NO LOGOS. Portrait 9:16.
+
+FINAL PROMPT — ICON ATLAS
+Use case: stylized-concept. Asset type: premium fantasy RPG UI ICON ATLAS. One square transparent PNG containing exactly 16 separate icons in a precise uniform 4 columns by 4 rows grid. Equal square cells, one centered complete icon per cell, generous empty transparent margins, never overlap cells. All icons exquisite polished sculpted warm gold 3D game UI objects with bevels, amber highlights, dark bronze details, soft shadows, consistent frontal view. NO letters, NO text, NO grid lines, NO labels, NO interface plates, NO outer shields. Exact row-major order: row 1: (1) four-leaf golden clover emblem, (2) red gift box wrapped with golden ribbon, (3) open treasure chest overflowing with gold coins, (4) ivory calendar page with red checkmark and red binding. Row 2: (5) white envelope sealed with gold wax, (6) silver and gold settings cog gear, (7) purple golden VIP season ticket bearing crown, (8) red crystal and gold ornate event treasure chest. Row 3: (9) elegant golden knight helmet, (10) leather brown backpack with gold buckle, (11) three golden human bust silhouettes as team formation, (12) golden radiant eight-pointed ascension star. Row 4: (13) rolled ivory mission parchment with red checkmark, (14) golden trophy cup with star, (15) miniature medieval shop red and gold canopy, (16) pair of crossed silver blades with golden hilts. High-end AFK idle heroes fantasy mobile game inventory icons, sharp legible silhouettes even small, beautifully painted stylized 3D metal materials. Transparent background.
+
+FINAL PROMPT — STANDARD TEXT PLAQUE (ACTIVE)
+Use case: stylized-concept. Asset type: reusable premium fantasy mobile RPG button frame texture, not an icon. Create ONE single EMPTY horizontal ornate nameplate on a truly transparent background, landscape 3:1 canvas. Long thin elegant dark plum obsidian center with a very subtle purple velvet gradient, beveled polished warm gold double rim, pointed beveled ends and delicate restrained gold filigree confined to the left and right end caps. Beautiful high-end AFK idle heroes fantasy game UI quality, soft amber highlight along the upper edge, slightly darker bronze lower bevel, premium meticulously painted 3D metal. Plate fills 94 percent of image width, centered vertically, with transparent outside margins. Center 70 percent of plate must be completely clear and visually quiet to overlay readable live text in the game. Shape is symmetrical and clean, crisp at small scale, overall height about one third of its width. Absolutely NO symbols, NO icons, NO emblems, NO diamonds, NO stars, NO gems, NO clovers, NO swords, NO letters, NO words, NO numbers, NO watermark. Only the empty reusable decorative frame.
+
+FINAL PROMPT — SUPPLEMENTARY RESOURCE ATLAS (ACTIVE)
+Use case: stylized-concept. Asset type: supplementary resource atlas matching a premium AFK fantasy mobile RPG gold sculpted UI art set. Square transparent PNG, precise 2 by 2 equal cell grid, four individual objects centered separately in each cell with generous transparent margins, no overlap. Top left a polished golden coin bearing an embossed four-leaf clover, top right a luminous faceted cyan blue diamond with rich crystalline highlights, bottom left a cluster of luminous purple amethyst magic essence crystals in a small warm gold base, bottom right a single polished golden FIVE POINT rarity star with beveled sculpted edges. Consistent premium stylized 3D game art, warm gold framing, jewel highlights, clean silhouettes legible small, same studio lighting across all four. No UI plates, no backgrounds, no text, no numbers, no labels, no letters, no grid lines. Actual transparent alpha.
+
+FINAL PROMPT — PREMIUM PLAYER CARD
+Use case: stylized-concept. Asset type: one empty premium player PROFILE CARD FRAME for a fantasy idle mobile RPG. Transparent PNG, wide 3:1 composition. Dark royal plum obsidian inset panels, polished beveled gold double borders, delicate gold filigree, warm amber edge light, premium AFK fantasy UI finish matching a Black Clover game. Left 30 percent a large EMPTY circular portrait socket with ornate gold rim. Right 70 percent an integrated EMPTY nameplate at top, two smaller EMPTY fields side by side below for live level and VIP, a very thin EMPTY experience bar track at bottom. ONE unified coherent frame, tightly framed with small transparent margins. All fields blank for code to overlay live player data and avatar. NO characters, NO icons, NO letters, NO numbers, NO words, NO emblems, NO symbols, NO stars, NO crowns, NO logos, NO gems.
+
+PlayerCard uses a circular crop of an owned Black Clover hero. The selected
+avatar and VIP value are saved in the profile. Account level uses separately
+saved player experience, not hero levels; each campaign win grants 75 XP,
+100 XP grants a level, capped at level 100. Older saves migrate account XP from
+completed campaign stages. VIP defaults to 0; no VIP purchase is simulated.
+
+CHECKS
+Godot 4.7.2:
+  --headless --path . --script res://tools/home_qa.gd
+  --headless --path . --script res://tools/clover_qa.gd
+Run home_qa without --headless to render portrait screenshots.
+Both suites use isolated save files and remove them on completion.
+tools/capture_home.gd captures the home using the actual player's saved data.

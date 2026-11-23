@@ -1,0 +1,44 @@
+﻿ENTREGA VISUAL — BLACK CLOVER / GODOT
+Data: 20/11/2026
+
+ARQUIVOS CRIADOS
+- assets/heroes/{asta,yuno,noelle,yami,magna,luck}/{body,head,arms,legs,weapon}.svg: 30 partes transparentes extraidas das ilustracoes vetoriais proprias existentes.
+- assets/backgrounds/moonlit_ruins.svg: floresta, arco em ruinas, pilares, luar e piso.
+- shaders/hero_flash.gdshader: flash de dano por material independente.
+- scripts/visuals/animated_hero.gd: rig, animacoes, adaptacao dos IDs bc_, sinais e apresentacao das unidades.
+- scripts/visuals/element_vfx.gd: emissao, cortes, impactos e particulas por elemento; tempo respeita velocidade e pausa da unidade; nos temporarios sao removidos.
+- scripts/visuals/arena_presentation.gd e scenes/visuals/arena_presentation.tscn: fundo substituivel, HUD, cronometro decorrido e cartoes de vida.
+- tools/build_vector_rigs.ps1: regeneracao das partes a partir dos SVGs originais.
+- tools/visual_qa.gd: verificacao executavel de integracao e capturas.
+- tools/capture_asta.gd: primeira validacao do Asta dentro da batalha.
+
+ARQUIVOS MODIFICADOS
+- scripts/battle/hero_visual.gd: ponto de entrada compativel com setup/play/return_to_idle, delegando a camada visual.
+- scenes/hero_visual.tscn: substitui Sprite/ColorRect antigos pelo componente criado em runtime.
+- scripts/autoload/collection_registry.gd: somente a chamada _register_collection foi corrigida para register_collection, apos informar o problema. O registro estava sendo alterado simultaneamente pelo Claude.
+Nao foram editados battle_unit.gd, battle_manager.gd, battle_scene.gd, battle_ui.gd, project.godot, package.json, Phaser ou node_modules nesta etapa. Alteracoes simultaneas nesses arquivos pertencem ao outro trabalho em andamento.
+
+ANIMACOES
+Idle, run, attack, skill, hit, death e victory via AnimationPlayer.
+Movimento independente de cabeca, bracos, pernas e arma. Espelhamento do rig inteiro e origem nos pes.
+Transicoes de 70ms. Callbacks atrasados de hit nao interrompem ataque, habilidade, morte ou vitoria.
+Run acompanha o deslocamento existente; hit aciona flash; attacked aciona impacto; battle_ended aciona vitoria.
+Os movimentos sao animacao recortada procedural, e nao spritesheets desenhadas quadro a quadro.
+
+VALIDACAO
+- Primeiro Asta articulado executado na batalha antes de gerar os demais rigs.
+- Godot 4.7.2 instalado: importacao e execucao.
+- Executavel GODOT_PATH 4.7 tambem invocado inicialmente; trata-se de executavel GUI sem retorno de console util.
+- Godot MCP consultado: falhou pois o servidor procura C:/Program Files/Godot/Godot.exe. Nao alterei a configuracao do servidor.
+- Teste renderizado OpenGL Compatibility: VISUAL_QA: PASS, failures=0.
+- Spawn 5v5, 5 partes por heroi, estados, velocidade 2x, pausa, protecao de estados finais, reinicio e relogio.
+- Capturas 540x960 e 720x1280 inspecionadas visualmente, HUD completa e separada da arena.
+- Simulacao headless de 3600 quadros a 60 fps (60 segundos de jogo), sem erros registrados.
+- Logs e capturas em artifacts/visual-qa/.
+
+ASSETS REAIS E LIMITES
+Sao SVGs transparentes, shader e animacoes executaveis reais. Nao foram gerados PNGs finais de anime nem extraidos sprites comerciais.
+O resultado e uma base vetorial estilizada funcional. Ainda nao equivale ao acabamento comercial de AFK Arena.
+Pendencias: ilustracoes detalhadas de producao, animacao de locomocao com pernas separadas, poses por heroi, coreografia especifica por habilidade, som e perfil de GPU em aparelho Android/iOS real.
+Os testes cobrem resolucoes retrato 9:16; outros aspectos e safe areas de aparelhos com recortes precisam de verificacao propria.
+A formacao e as regras de combate continuam sob responsabilidade do Claude.

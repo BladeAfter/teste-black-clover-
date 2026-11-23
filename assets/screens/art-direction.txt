@@ -1,0 +1,14 @@
+Direcao de arte dos novos cenarios e chefe
+
+activity-atlas.png:
+Premium fantasy idle RPG environment atlas, exact two by two panels.
+Top left: violet magical tower interior. Top right: sunlit stone arena.
+Bottom left: warm Black Bulls guild hall. Bottom right: volcanic boss cave.
+Polished 3D anime art, rich detailed lighting, clear space for UI overlay,
+no labels, text, characters, frames or interface.
+
+boss-dragon.png:
+Isolated black and crimson chibi fantasy dragon boss, full body three
+quarter view facing left, large head and compact powerful body, glowing
+orange mouth and eyes, obsidian scales, red wing membranes, polished
+3D anime game render, transparent background, no lettering or UI.
