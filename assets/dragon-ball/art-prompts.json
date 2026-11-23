@@ -1,0 +1,106 @@
+{
+  "tool": "imagegen built-in",
+  "style": "3D Chibi Anime",
+  "prompts": [
+    {
+      "file": "01-goku.png",
+      "name": "Goku",
+      "prompt": "Create one premium collectible character art: adult Goku, iconic black spiky hair, orange martial arts gi with blue undershirt, belt and boots, cheerful determined expression, small blue ki glow in open hand. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "02-vegeta.png",
+      "name": "Vegeta",
+      "prompt": "Create one premium collectible character art: adult Vegeta, distinctive upright black hair and widow's peak, blue bodysuit and white gold Saiyan chest armor, white gloves and boots, proud crossed arms. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "03-gohan.png",
+      "name": "Gohan",
+      "prompt": "Create one premium collectible character art: adult Ultimate Gohan, short sharp black spiky hair with a single forelock, orange gi and blue undershirt, focused protective expression, ready fighting stance. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "04-piccolo.png",
+      "name": "Piccolo",
+      "prompt": "Create one premium collectible character art: Piccolo, recognizable green Namekian skin, pointed ears and antennae, white turban and shoulder cape, purple gi and blue sash, stoic expression. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "05-trunks.png",
+      "name": "Trunks do Futuro",
+      "prompt": "Create one premium collectible character art: Future Trunks, lavender bob hair, cropped blue jacket, black tank top, gray trousers and yellow boots, sword and scabbard on his back, confident. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "06-goten.png",
+      "name": "Goten",
+      "prompt": "Create one premium collectible character art: young Goten, small child with Goku-like black spiky hair, orange and dark blue gi, happy expressive face, playful martial arts pose. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "07-kuririn.png",
+      "name": "Kuririn",
+      "prompt": "Create one premium collectible character art: Krillin, short bald adult martial artist, six forehead dots, orange Turtle School gi, blue belt and boots, friendly determined expression. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "08-tenshinhan.png",
+      "name": "Tenshinhan",
+      "prompt": "Create one premium collectible character art: Tien Shinhan, bald adult with distinctive third eye in center of forehead, green martial arts trousers, red sash, bare muscular upper body, disciplined open-hand pose. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "09-yamcha.png",
+      "name": "Yamcha",
+      "prompt": "Create one premium collectible character art: Yamcha, long shaggy black hair, recognizable scars across face, orange gi with blue sash and wristbands, relaxed heroic grin, wolf-fang martial arts stance. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "10-mestre-kame.png",
+      "name": "Mestre Kame",
+      "prompt": "Create one premium collectible character art: Master Roshi, bald elderly martial arts master with round sunglasses and long white beard, orange Hawaiian shirt and shorts, turtle shell backpack, wooden staff, friendly smile. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "11-android-18.png",
+      "name": "Android 18",
+      "prompt": "Create one premium collectible character art: Android 18, straight blonde chin-length bob, confident blue eyes, cropped blue denim vest and skirt over striped sleeves, black leggings and brown boots, elegant combat stance. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "12-android-17.png",
+      "name": "Android 17",
+      "prompt": "Create one premium collectible character art: Android 17, straight center-parted black shoulder-length hair, green park ranger long-sleeved shirt, orange neckerchief, blue jeans and boots, cool confident expression. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "13-videl.png",
+      "name": "Videl",
+      "prompt": "Create one premium collectible character art: adult Videl, short dark hair, large blue eyes, white short-sleeved shirt and dark cycling shorts, green boots and gloves, energetic martial arts stance. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "14-pan.png",
+      "name": "Pan",
+      "prompt": "Create one premium collectible character art: young Pan from Dragon Ball GT, black short hair beneath orange bandana, red short-sleeved cropped top, beige cargo trousers and dark boots, lively confident expression, fully clothed child character. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "15-majin-boo.png",
+      "name": "Majin Boo",
+      "prompt": "Create one premium collectible character art: Good Majin Buu, friendly round pink body and curved head antenna, purple cape, dark vest with yellow trim, white baggy trousers, yellow boots and gloves, happy heroic smile. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "16-uub.png",
+      "name": "Uub",
+      "prompt": "Create one premium collectible character art: teen Uub, dark brown skin, distinctive black mohawk, orange martial arts trousers and white sash, confident gentle face, focused palm-forward martial arts stance. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "17-chaos.png",
+      "name": "Chaos",
+      "prompt": "Create one premium collectible character art: Chiaotzu, tiny pale white face with round red cheeks, black round cap with red top ornament, green Chinese martial arts vest over white sleeves and yellow trousers, levitating hands but feet grounded. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "18-bardock.png",
+      "name": "Bardock",
+      "prompt": "Create one premium collectible character art: Bardock, wild black Goku-like spiky hair, red headband, scar on cheek, dark green Saiyan armor, red wristbands and boots, brave battle-ready expression. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "19-gogeta.png",
+      "name": "Gogeta",
+      "prompt": "Create one premium collectible character art: base-form Gogeta, iconic black fusion spiky hair, black and orange padded fusion vest, bare chest, blue sash, white baggy trousers and dark boots, cocky heroic grin. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    },
+    {
+      "file": "20-vegetto.png",
+      "name": "Vegetto",
+      "prompt": "Create one premium collectible character art: base-form Vegito, black spiky fusion hair with two prominent hanging bangs, Potara earrings, blue martial arts gi over orange shirt, white gloves and boots, confident heroic stance. Faithful recognizable Dragon Ball hero transformed into polished 3D CHIBI ANIME game art, matching an upscale idle RPG. Full body, approximately 2.5 heads tall, oversized expressive anime eyes, compact limbs, detailed costume materials and sculpted hair, cinematic soft studio light. Standing in three-quarter view facing slightly RIGHT. Entire character, hair, weapon and any small effect fully visible, centered, with at least 12 percent empty margin. Feet on a consistent baseline at 88 percent of canvas height. REAL TRANSPARENT BACKGROUND: outside the silhouette alpha must be zero, no white/gray backdrop, no halo, no floor, no cast shadow, no border, no text, no UI, no watermark. Single square character asset."
+    }
+  ]
+}

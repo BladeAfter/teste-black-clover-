@@ -43,12 +43,12 @@ func lineup(mode: String, rank: int) -> Array:
 	return result
 
 func spawn(game, mode: String, rank: int) -> void:
-	var slots := preload("res://scripts/visuals/battle_formation.gd").slots(true)
+	var slots := preload("res://scripts/visuals/battle_formation.gd").slots(true,bool(game.field.get_meta("expanded",false)))
 	var entries := lineup(mode,rank)
 	for i in range(entries.size()):
 		var entry: Dictionary = entries[i]
 		var boss := is_boss(mode,rank) and i == 0
-		var display_height := preload("res://scripts/visuals/battle_formation.gd").BOSS_HEIGHT if boss else preload("res://scripts/visuals/battle_formation.gd").ENEMY_HEIGHT
+		var display_height := preload("res://scripts/visuals/battle_formation.gd").height_for(i,true,boss,bool(game.field.get_meta("expanded",false)))
 		var unit = game._spawn(int(entry.behavior),slots[i],true,display_height,true)
 		unit.body.texture = texture(entry)
 		var cell_size: Vector2 = unit.body.texture.get_size()

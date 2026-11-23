@@ -1,7 +1,8 @@
-﻿ANDROID E TELEGRAM — CAVALEIROS DO GRIMORIO
+ANDROID E TELEGRAM — CAVALEIROS DO GRIMORIO
 
 Comportamento
-- Home e demais abas: vertical, 720 x 1280.
+- Home e abas de colecao: vertical, 720 x 1280.
+- Formacao e combate: horizontal, 1280 x 720.
 - Ao abrir Campanha: layout horizontal, 1280 x 720.
 - Ao voltar ao Reino: restaura vertical.
 - Android usa orientacao nativa sensor-landscape/sensor-portrait.

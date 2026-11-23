@@ -1312,7 +1312,7 @@
     {
       "id": 0,
       "name": "Rei Goblin",
-      "sheet": "bosses-01.png",
+      "sheet": "bosses-01-clean.png",
       "cell": 0,
       "columns": 5,
       "rows": 2,
@@ -1325,7 +1325,7 @@
     {
       "id": 1,
       "name": "Lobo Alfa Ancestral",
-      "sheet": "bosses-01.png",
+      "sheet": "bosses-01-clean.png",
       "cell": 1,
       "columns": 5,
       "rows": 2,
@@ -1338,7 +1338,7 @@
     {
       "id": 2,
       "name": "Ent Milenar",
-      "sheet": "bosses-01.png",
+      "sheet": "bosses-01-clean.png",
       "cell": 2,
       "columns": 5,
       "rows": 2,
@@ -1351,7 +1351,7 @@
     {
       "id": 3,
       "name": "Senhor dos Bandidos",
-      "sheet": "bosses-01.png",
+      "sheet": "bosses-01-clean.png",
       "cell": 3,
       "columns": 5,
       "rows": 2,
@@ -1364,7 +1364,7 @@
     {
       "id": 4,
       "name": "Arqui-Lich",
-      "sheet": "bosses-01.png",
+      "sheet": "bosses-01-clean.png",
       "cell": 4,
       "columns": 5,
       "rows": 2,
@@ -1377,7 +1377,7 @@
     {
       "id": 5,
       "name": "Titã Glacial",
-      "sheet": "bosses-01.png",
+      "sheet": "bosses-01-clean.png",
       "cell": 5,
       "columns": 5,
       "rows": 2,
@@ -1390,7 +1390,7 @@
     {
       "id": 6,
       "name": "Rainha das Harpias",
-      "sheet": "bosses-01.png",
+      "sheet": "bosses-01-clean.png",
       "cell": 6,
       "columns": 5,
       "rows": 2,
@@ -1403,7 +1403,7 @@
     {
       "id": 7,
       "name": "Imperador Escorpião",
-      "sheet": "bosses-01.png",
+      "sheet": "bosses-01-clean.png",
       "cell": 7,
       "columns": 5,
       "rows": 2,
@@ -1416,7 +1416,7 @@
     {
       "id": 8,
       "name": "Faraó das Dunas",
-      "sheet": "bosses-01.png",
+      "sheet": "bosses-01-clean.png",
       "cell": 8,
       "columns": 5,
       "rows": 2,
@@ -1429,7 +1429,7 @@
     {
       "id": 9,
       "name": "Serpente do Deserto",
-      "sheet": "bosses-01.png",
+      "sheet": "bosses-01-clean.png",
       "cell": 9,
       "columns": 5,
       "rows": 2,
@@ -1442,7 +1442,7 @@
     {
       "id": 10,
       "name": "Kraken Abissal",
-      "sheet": "bosses-02.png",
+      "sheet": "bosses-02-clean.png",
       "cell": 0,
       "columns": 5,
       "rows": 2,
@@ -1455,7 +1455,7 @@
     {
       "id": 11,
       "name": "Rei dos Tubarões",
-      "sheet": "bosses-02.png",
+      "sheet": "bosses-02-clean.png",
       "cell": 1,
       "columns": 5,
       "rows": 2,
@@ -1468,7 +1468,7 @@
     {
       "id": 12,
       "name": "Leviatã das Marés",
-      "sheet": "bosses-02.png",
+      "sheet": "bosses-02-clean.png",
       "cell": 2,
       "columns": 5,
       "rows": 2,
@@ -1481,7 +1481,7 @@
     {
       "id": 13,
       "name": "Colosso de Magma",
-      "sheet": "bosses-02.png",
+      "sheet": "bosses-02-clean.png",
       "cell": 3,
       "columns": 5,
       "rows": 2,
@@ -1494,7 +1494,7 @@
     {
       "id": 14,
       "name": "Fênix das Cinzas",
-      "sheet": "bosses-02.png",
+      "sheet": "bosses-02-clean.png",
       "cell": 4,
       "columns": 5,
       "rows": 2,
@@ -1507,7 +1507,7 @@
     {
       "id": 15,
       "name": "Dragão da Tempestade",
-      "sheet": "bosses-02.png",
+      "sheet": "bosses-02-clean.png",
       "cell": 5,
       "columns": 5,
       "rows": 2,
@@ -1520,7 +1520,7 @@
     {
       "id": 16,
       "name": "Rei dos Elfos Sombrios",
-      "sheet": "bosses-02.png",
+      "sheet": "bosses-02-clean.png",
       "cell": 6,
       "columns": 5,
       "rows": 2,
@@ -1533,7 +1533,7 @@
     {
       "id": 17,
       "name": "Aranha Rainha de Cristal",
-      "sheet": "bosses-02.png",
+      "sheet": "bosses-02-clean.png",
       "cell": 7,
       "columns": 5,
       "rows": 2,
@@ -1546,7 +1546,7 @@
     {
       "id": 18,
       "name": "Imperador Autômato",
-      "sheet": "bosses-02.png",
+      "sheet": "bosses-02-clean.png",
       "cell": 8,
       "columns": 5,
       "rows": 2,
@@ -1559,7 +1559,7 @@
     {
       "id": 19,
       "name": "Grifo Dourado",
-      "sheet": "bosses-02.png",
+      "sheet": "bosses-02-clean.png",
       "cell": 9,
       "columns": 5,
       "rows": 2,
@@ -1572,7 +1572,7 @@
     {
       "id": 20,
       "name": "Ceifador do Eclipse",
-      "sheet": "bosses-03.png",
+      "sheet": "bosses-03-clean.png",
       "cell": 0,
       "columns": 5,
       "rows": 2,
@@ -1585,7 +1585,7 @@
     {
       "id": 21,
       "name": "Dragão de Obsidiana",
-      "sheet": "bosses-03.png",
+      "sheet": "bosses-03-clean.png",
       "cell": 1,
       "columns": 5,
       "rows": 2,
@@ -1598,7 +1598,7 @@
     {
       "id": 22,
       "name": "Hidra Venenosa",
-      "sheet": "bosses-03.png",
+      "sheet": "bosses-03-clean.png",
       "cell": 2,
       "columns": 5,
       "rows": 2,
@@ -1611,7 +1611,7 @@
     {
       "id": 23,
       "name": "Anjo Caído",
-      "sheet": "bosses-03.png",
+      "sheet": "bosses-03-clean.png",
       "cell": 3,
       "columns": 5,
       "rows": 2,
@@ -1624,7 +1624,7 @@
     {
       "id": 24,
       "name": "Leão Solar Ancestral",
-      "sheet": "bosses-03.png",
+      "sheet": "bosses-03-clean.png",
       "cell": 4,
       "columns": 5,
       "rows": 2,
@@ -1637,7 +1637,7 @@
     {
       "id": 25,
       "name": "Arquidemônio das Chamas",
-      "sheet": "bosses-03.png",
+      "sheet": "bosses-03-clean.png",
       "cell": 5,
       "columns": 5,
       "rows": 2,
@@ -1650,7 +1650,7 @@
     {
       "id": 26,
       "name": "Titã do Vazio",
-      "sheet": "bosses-03.png",
+      "sheet": "bosses-03-clean.png",
       "cell": 6,
       "columns": 5,
       "rows": 2,
@@ -1663,7 +1663,7 @@
     {
       "id": 27,
       "name": "Serpente Cósmica",
-      "sheet": "bosses-03.png",
+      "sheet": "bosses-03-clean.png",
       "cell": 7,
       "columns": 5,
       "rows": 2,
@@ -1676,7 +1676,7 @@
     {
       "id": 28,
       "name": "Rei do Caos",
-      "sheet": "bosses-03.png",
+      "sheet": "bosses-03-clean.png",
       "cell": 8,
       "columns": 5,
       "rows": 2,
@@ -1689,7 +1689,7 @@
     {
       "id": 29,
       "name": "Guardião do Último Grimório",
-      "sheet": "bosses-03.png",
+      "sheet": "bosses-03-clean.png",
       "cell": 9,
       "columns": 5,
       "rows": 2,

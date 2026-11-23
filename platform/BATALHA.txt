@@ -1,0 +1,15 @@
+FORMACAO HORIZONTAL E TELA DE COMBATE
+
+Formacao: tela horizontal, duas posicoes na frente e tres na retaguarda.
+As colunas ficam voltadas para os adversarios, espelhadas entre os lados.
+Personagens de tras usam escala menor para manter o espaco e a perspectiva.
+Antes da luta: controles de preparacao menores.
+Durante a luta: campo ampliado, sem perfil, carteira, abas ou painel inferior.
+Controles disponiveis: 1x/2x, Batalha (alternar proxima batalha automatica), Recuar.
+Recuar retorna ao Reino em vertical.
+Formacao e combate mantem a rotacao e o mapeamento de toque do Telegram.
+
+Arte: os 30 chefoes usam os atlas bosses-01-clean, bosses-02-clean,
+bosses-03-clean, editados com imagegen para remover os fundos brancos.
+Originais preservados. Prompts: assets/encounters/transparency-prompts.json.
+Teste: tools/battle_layout_qa.gd.

@@ -39,6 +39,7 @@ var menu_art: Texture2D
 var resource_art: Texture2D
 var art_cache: Dictionary = {}
 var landscape_mode := false
+var battle_view := false
 var web_back_callback: JavaScriptObject
 var web_layout_callback: JavaScriptObject
 var player_card_texture: Texture2D
@@ -304,16 +305,17 @@ func _clear(node: Node) -> void:
 		node.remove_child(child)
 		child.queue_free()
 
-func _route(page: String) -> void:
+func _route(page: String, combat_view := false) -> void:
 	if game.fighting:
 		_notice("Batalha em andamento", "Conclua a batalha ou toque em Recuar para voltar ao reino.")
 		return
 	_close()
+	battle_view = combat_view
 	current_page = page
 	if page != "Campanha":
 		active_activity = "Campanha"
 		game.battle_kind = "campaign"
-	_set_orientation(page == "Campanha")
+	_set_orientation(page in ["Campanha", "Forma\u00e7\u00e3o"])
 	_clear(screen)
 	_clear(hud)
 	_clear(navigation)
@@ -325,9 +327,12 @@ func _route(page: String) -> void:
 	game.field = null
 	game.effects = null
 	if landscape_mode:
-		_build_landscape_hud()
-		_campaign()
+		hud.visible = not battle_view
+		if not battle_view: _build_landscape_hud()
+		if page == "Campanha": _campaign()
+		else: _formation_landscape()
 	else:
+		hud.show()
 		_build_hud()
 		_build_nav()
 	if page == "Início": _home()
@@ -381,6 +386,7 @@ func _build_landscape_hud() -> void:
 	var encounter_rank: int = game.stage if active_activity == "Campanha" else int(state.tower_floor)
 	if active_activity in ["Campanha", "Torre Infinita"]:
 		encounter_title = activities.encounters.scene_info(active_activity, encounter_rank).name
+	if current_page == "Forma\u00e7\u00e3o": encounter_title = "FORMACAO - 2 NA FRENTE / 3 ATRAS"
 	var location_label := _text(encounter_title, Rect2(382, 20, 420, 28), hud, 15, GOLD, true)
 	location_label.clip_text = true
 	location_label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
@@ -388,6 +394,7 @@ func _build_landscape_hud() -> void:
 	_art(15, Rect2(387, 50, 26, 26), hud)
 	var progress_text := "Fase %d" % game.stage if active_activity == "Campanha" else "Andar %d" % encounter_rank if active_activity == "Torre Infinita" else "Desafio %d" % game.enemy_rank()
 	if active_activity in ["Campanha", "Torre Infinita"] and activities.encounters.is_boss(active_activity, encounter_rank): progress_text += " - BOSS"
+	if current_page == "Forma\u00e7\u00e3o": progress_text = "Seu esquadrao"
 	_text(progress_text, Rect2(580, 50, 220, 27), hud, 18, GOLD, true)
 	for i in range(3):
 		var bar := _frame(Rect2(815 + i * 146, 25, 140, 46), hud, func():
@@ -671,7 +678,7 @@ func _shop() -> void:
 	_plate("Ganhos AFK", Rect2(161, 730, 398, 62), screen, _claim_afk, false, 25)
 
 func _campaign() -> void:
-	_panel(Rect2(12, 100, 1256, 478), screen, Color("211b2c"))
+	_panel(Rect2(12,12,1256,696) if battle_view else Rect2(12,100,1256,478),screen,Color("211b2c"))
 	var stage_texture: Texture2D = activities.background_for(active_activity)
 	if active_activity not in ["Campanha", "Torre Infinita"]:
 		# Frame the floor when converting square activity art to landscape.
@@ -680,59 +687,51 @@ func _campaign() -> void:
 		var art_size := stage_texture.get_size()
 		ground_view.region = Rect2(0, art_size.y * 0.50, art_size.x, art_size.x * 466.0 / 1244.0)
 		stage_texture = ground_view
-	_image(stage_texture, Rect2(18, 106, 1244, 466), screen)
+	_image(stage_texture,Rect2(18,18,1244,684) if battle_view else Rect2(18,106,1244,466),screen)
 	game.field = Node2D.new()
-	game.field.position = Vector2(18, 106)
+	game.field.position = Vector2(18,18) if battle_view else Vector2(18,106)
+	game.field.set_meta("expanded",battle_view)
 	game.field.y_sort_enabled = true
 	screen.add_child(game.field)
-	var left := preload("res://scripts/visuals/battle_formation.gd").slots()
-	for i in range(game.team.size()): game._spawn(game.team[i], left[i], false, preload("res://scripts/visuals/battle_formation.gd").HERO_HEIGHT, true)
+	var left := preload("res://scripts/visuals/battle_formation.gd").slots(false,battle_view)
+	for i in range(game.team.size()): game._spawn(game.team[i], left[i], false, preload("res://scripts/visuals/battle_formation.gd").height_for(i,false,false,battle_view), true)
 	game.effects = Node2D.new()
 	game.effects.position = game.field.position
 	game.effects.z_index = 600
 	screen.add_child(game.effects)
-	game.log_label = _text("Seu esquadrão está pronto.", Rect2(280, 541, 720, 28), screen, 18, GOLD, false, true)
+	game.log_label = _text("Seu esquadrão está pronto.", Rect2(24,657,680,29) if battle_view else Rect2(280,541,720,28), screen, 18, GOLD, false, true)
 	game.log_label.z_index = 800
-	game.battle_label = _text("", Rect2(467, 113, 350, 32), screen, 20, WHITE, false, true)
+	game.battle_label = _text("", Rect2(467,24,350,32) if battle_view else Rect2(467,113,350,32), screen, 20, WHITE, false, true)
 	game.battle_label.z_index = 800
-	_panel(Rect2(12, 590, 1256, 116), screen)
-	_plate("Formação", Rect2(28, 620, 220, 58), screen, func(): _route("Formação"), false, 22)
-	_plate("Ganhos AFK", Rect2(267, 620, 220, 58), screen, _claim_afk, false, 21)
-	_plate("Auto ligado" if auto_battle else "Auto", Rect2(507, 620, 220, 58), screen, func():
+	if battle_view:
+		game.log_label.add_theme_font_size_override("font_size",14)
+		game.log_label.clip_text=true
+		_build_battle_controls()
+		return
+	_panel(Rect2(12,610,1256,92),screen)
+	_plate("Formação", Rect2(28,628,174,46), screen, func(): _route("Formação"), false, 22)
+	_plate("Ganhos AFK", Rect2(224,628,174,46), screen, _claim_afk, false, 21)
+	_plate("Auto ligado" if auto_battle else "Auto", Rect2(420,628,174,46), screen, func():
 		auto_battle = not auto_battle
 		if not game.fighting: _route("Campanha"), auto_battle, 21).name = "AutoPreference"
-	_plate("BATALHAR", Rect2(848, 610, 390, 78), screen, _start_battle, true, 29).name = "Battle"
+	_plate("BATALHAR", Rect2(908,620,300,60), screen, _start_battle, true, 29).name = "Battle"
 
 func _start_battle() -> void:
 	if game.fighting: return
-	_route("Campanha")
+	_route("Campanha",true)
 	game.fighting = true
 	game.battle_time = 0
 	game.beat = 0
 	game.action_index = 0
 	game.total_damage = 0
 	game.round_number = 1
-	var right := preload("res://scripts/visuals/battle_formation.gd").slots(true)
+	var right := preload("res://scripts/visuals/battle_formation.gd").slots(true,true)
 	if not activities.spawn_opponents():
-		for i in range(5): game._spawn((game.stage + i + 2) % 6, right[i], true, preload("res://scripts/visuals/battle_formation.gd").ENEMY_HEIGHT, true)
+		for i in range(5): game._spawn((game.stage + i + 2) % 6, right[i], true, preload("res://scripts/visuals/battle_formation.gd").height_for(i,true,false,true), true)
 	if active_activity in ["Campanha", "Torre Infinita"]:
 		var rank: int = game.stage if active_activity == "Campanha" else int(state.tower_floor)
 		var wave: Array = activities.encounters.lineup(active_activity, rank)
 		game.log_label.text = "CHEFÃO · " + str(wave[0].name) if activities.encounters.is_boss(active_activity, rank) else "Derrote a patrulha de " + str(wave[0].name)
-	var old := screen.get_node_or_null("Battle")
-	if old:
-		screen.remove_child(old)
-		old.queue_free()
-	var preference := screen.get_node_or_null("AutoPreference")
-	if preference: preference.hide()
-	_plate("×%d" % game.speed, Rect2(523, 619, 141, 59), screen, func():
-		game.speed = 2 if game.speed == 1 else 1
-		var button = screen.get_node("Speed")
-		button.get_child(0).text = "×%d" % game.speed, false, 26).name = "Speed"
-	_plate("AUTO LIGADO" if auto_battle else "AUTO", Rect2(688, 619, 240, 59), screen, func():
-		auto_battle = not auto_battle
-		screen.get_node("Auto").get_child(0).text = "AUTO LIGADO" if auto_battle else "AUTO", auto_battle, 18).name = "Auto"
-	_plate("Recuar", Rect2(976, 619, 265, 59), screen, func(): game.fighting = false; auto_battle = false; _route("Início"), false, 22)
 
 func _battle_result(won: bool) -> void:
 	if activities.finish(won): return
@@ -923,3 +922,36 @@ func _notification(what: int) -> void:
 	if what in [NOTIFICATION_WM_CLOSE_REQUEST, NOTIFICATION_APPLICATION_PAUSED]:
 		_save_home()
 		if is_instance_valid(game): game._save_game()
+
+func _build_battle_controls() -> void:
+	var controls := Control.new()
+	controls.name = "BattleControls"
+	controls.mouse_filter=Control.MOUSE_FILTER_IGNORE
+	screen.add_child(controls)
+	_plate("%dx" % game.speed,Rect2(738,654,120,46),controls,func():
+		game.speed=2 if game.speed==1 else 1
+		controls.get_node("Speed").get_child(0).text="%dx" % game.speed,false,18).name="Speed"
+	_plate("Batalha auto" if auto_battle else "Batalha",Rect2(870,654,180,46),controls,func():
+		auto_battle=not auto_battle
+		controls.get_node("Auto").get_child(0).text="Batalha auto" if auto_battle else "Batalha",false,17).name="Auto"
+	_plate("Recuar",Rect2(1062,654,180,46),controls,_retreat_battle,false,17).name="Retreat"
+
+func _retreat_battle() -> void:
+	game.fighting=false
+	auto_battle=false
+	_route("In\u00edcio")
+
+func _formation_landscape() -> void:
+	_panel(Rect2(12,108,500,596),screen)
+	_panel(Rect2(530,108,738,596),screen)
+	_text("RETAGUARDA",Rect2(30,118,180,26),screen,17,GOLD,true,true)
+	_text("FRENTE",Rect2(250,118,215,26),screen,17,GOLD,true,true)
+	for i in range(5):
+		var slot := i
+		var position := Vector2(268,220+i*198) if i<2 else Vector2(42,153+(i-2)*182)
+		var button: Button
+		if i<game.team.size(): button=_hero_card(game.team[i],Rect2(position,Vector2(170,156)),func(): selected_slot=slot; _route("Forma\u00e7\u00e3o"),screen)
+		else: button=_plate("Vazio",Rect2(position,Vector2(170,156)),screen,func(): selected_slot=slot; _route("Forma\u00e7\u00e3o"))
+		button.active=i==selected_slot
+	roster.render(Rect2(550,128,696,550),"formation",_choose_formation,true)
+	_plate("Confirmar",Rect2(252,646,236,42),screen,func(): _route("Campanha"),true,18)

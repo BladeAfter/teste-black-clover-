@@ -1,0 +1,307 @@
+{
+  "status": "PASS",
+  "count": 20,
+  "errors": [],
+  "images": [
+    {
+      "file": "01-goku.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 1140834
+    },
+    {
+      "file": "02-vegeta.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 780921
+    },
+    {
+      "file": "03-gohan.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 983648
+    },
+    {
+      "file": "04-piccolo.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 1403068
+    },
+    {
+      "file": "05-trunks.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 1277830
+    },
+    {
+      "file": "06-goten.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "bytes": 1216658
+    },
+    {
+      "file": "07-kuririn.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "bytes": 954633
+    },
+    {
+      "file": "08-tenshinhan.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "bytes": 1151382
+    },
+    {
+      "file": "09-yamcha.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 1245905
+    },
+    {
+      "file": "10-mestre-kame.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 1356386
+    },
+    {
+      "file": "11-android-18.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 954898
+    },
+    {
+      "file": "12-android-17.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 1059089
+    },
+    {
+      "file": "13-videl.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 828340
+    },
+    {
+      "file": "14-pan.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 1027104
+    },
+    {
+      "file": "15-majin-boo.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 1515413
+    },
+    {
+      "file": "16-uub.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "bytes": 996825
+    },
+    {
+      "file": "17-chaos.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 1368217
+    },
+    {
+      "file": "18-bardock.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 1174316
+    },
+    {
+      "file": "19-gogeta.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 1025931
+    },
+    {
+      "file": "20-vegetto.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "corner_alpha": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "bytes": 1021782
+    }
+  ]
+}

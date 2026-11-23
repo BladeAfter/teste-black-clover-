@@ -20,7 +20,7 @@ for group, names in enumerate(ENEMIES):
   i=group*25+cell; behavior=i%6
   catalog['enemies'].append({'id':i,'name':name,'sheet':f'enemies-{group+1:02}.png','cell':cell,'columns':5,'rows':5,'behavior':behavior,'element':behavior,'skill':SKILLS[behavior],'hp':1.0+(i%5)*0.09,'attack':0.85+(i%7)*0.055})
 for i,name in enumerate(BOSSES):
- catalog['bosses'].append({'id':i,'name':name,'sheet':f'bosses-{i//10+1:02}.png','cell':i%10,'columns':5,'rows':2,'behavior':i%6,'element':i%6,'skill':['Cataclismo','Fúria Ancestral','Ruptura do Mana','Julgamento','Devastação'][i%5],'hp':3.0+(i%5)*0.25,'attack':1.35+(i%4)*0.1})
+ catalog['bosses'].append({'id':i,'name':name,'sheet':f'bosses-{i//10+1:02}-clean.png','cell':i%10,'columns':5,'rows':2,'behavior':i%6,'element':i%6,'skill':['Cataclismo','Fúria Ancestral','Ruptura do Mana','Julgamento','Devastação'][i%5],'hp':3.0+(i%5)*0.25,'attack':1.35+(i%4)*0.1})
 for i,name in enumerate(SCENES):
  catalog['scenes'].append({'id':i,'name':name,'sheet':f'scenery-{i//10+1:02}.png','cell':i%10,'columns':2,'rows':5})
 biomes = [(0,10),(0,10),(10,20),(10,15),(20,25),(25,30),(25,30),(30,35),(30,35),(30,35),(35,40),(35,40),(35,40),(40,45),(40,45),(45,50),(50,60),(60,65),(65,70),(70,75),(75,80),(80,85),(90,95),(85,90),(85,90),(95,100),(75,80),(85,90),(95,100),(15,25),(85,90),(30,35),(75,80),(90,95),(50,55),(60,70),(80,85),(45,50),(75,80),(95,100)]

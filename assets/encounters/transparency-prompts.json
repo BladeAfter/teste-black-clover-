@@ -1,0 +1,14 @@
+[
+  {
+    "file": "bosses-01-clean",
+    "prompt": "Edit the supplied game sprite atlas. Remove ALL the off-white/white/gray studio backdrop and rectangular cell mattes, leaving actual clean transparent alpha around each isolated creature. Preserve the exact 5 columns by 2 rows grid, all TEN characters in the same cells and the same relative position/scale, every face, costume, weapon, wing, original colors and 3D chibi rendering. Remove white haze between characters and around silhouette edges. Do NOT remove white hair, white fur, teeth, silver or golden armor or bright spells belonging to the characters. Do not add new artwork, floor, shadows, borders, text, or checkerboard. Deliver a production-ready transparent PNG atlas with clean cutout silhouettes and invisible empty pixels."
+  },
+  {
+    "file": "bosses-02-clean",
+    "prompt": "Edit the supplied game sprite atlas. Remove ALL the off-white/white/gray studio backdrop and rectangular cell mattes, leaving actual clean transparent alpha around each isolated creature. Preserve the exact 5 columns by 2 rows grid, all TEN characters in the same cells and the same relative position/scale, every face, costume, weapon, wing, original colors and 3D chibi rendering. Remove white haze between characters and around silhouette edges. Do NOT remove white hair, white fur, teeth, silver or golden armor or bright spells belonging to the characters. Do not add new artwork, floor, shadows, borders, text, or checkerboard. Deliver a production-ready transparent PNG atlas with clean cutout silhouettes and invisible empty pixels."
+  },
+  {
+    "file": "bosses-03-clean",
+    "prompt": "Edit the supplied game sprite atlas. Remove ALL the off-white/white/gray studio backdrop and rectangular cell mattes, leaving actual clean transparent alpha around each isolated creature. Preserve the exact 5 columns by 2 rows grid, all TEN characters in the same cells and the same relative position/scale, every face, costume, weapon, wing, original colors and 3D chibi rendering. Remove white haze between characters and around silhouette edges. Do NOT remove white hair, white fur, teeth, silver or golden armor or bright spells belonging to the characters. Do not add new artwork, floor, shadows, borders, text, or checkerboard. Deliver a production-ready transparent PNG atlas with clean cutout silhouettes and invisible empty pixels."
+  }
+]

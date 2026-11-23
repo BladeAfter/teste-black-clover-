@@ -213,7 +213,7 @@ func spawn_opponents() -> bool:
 		return true
 	var mode: String = h.active_activity
 	if mode=="Batalha de Chefes":
-		var boss = h.game._spawn(3,Vector2(937,420),true,310,true)
+		var boss = h.game._spawn(3,Vector2(970,570) if h.game.field.get_meta("expanded",false) else Vector2(937,420),true,310,true)
 		boss.body.texture=load("res://assets/screens/boss-dragon.png")
 		boss.body.scale=Vector2.ONE*310.0/boss.body.texture.get_height()
 		boss.body.offset.y=-boss.body.texture.get_height()*0.4805
@@ -224,9 +224,9 @@ func spawn_opponents() -> bool:
 		boss.attack_modifier=2.0
 		last_boss_hp=boss.hp
 		return true
-	var slots := preload("res://scripts/visuals/battle_formation.gd").slots(true)
+	var slots := preload("res://scripts/visuals/battle_formation.gd").slots(true,bool(h.game.field.get_meta("expanded",false)))
 	var seed: int = int(h.state.tower_floor) if mode=="Torre Infinita" else opponent+2
-	for i in range(5): h.game._spawn((seed+i)%6,slots[i],true,preload("res://scripts/visuals/battle_formation.gd").ENEMY_HEIGHT,true)
+	for i in range(5): h.game._spawn((seed+i)%6,slots[i],true,preload("res://scripts/visuals/battle_formation.gd").height_for(i,true,false,bool(h.game.field.get_meta("expanded",false))),true)
 	return true
 
 func finish(won: bool) -> bool:
