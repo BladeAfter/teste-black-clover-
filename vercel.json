@@ -1,0 +1,6 @@
+{
+  "buildCommand": "",
+  "outputDirectory": "phaser",
+  "cleanUrls": true,
+  "trailingSlash": false
+}
